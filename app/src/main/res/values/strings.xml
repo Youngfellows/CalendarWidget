@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">桌面小部件使用</string>
+    <string name="gadget_title" msgid="939918875331310945">桌面小部件使用</string>
+    <string name="no_title_label" msgid="302177118061368042">"（无标题）"</string>
+    <string name="agenda_tomorrow" msgid="3893625470780723605">"明天，%1$s"</string>
+    <string name="loading" msgid="3772533493214331230">"正在加载..."</string>
+    <string name="gadget_no_events" msgid="5209110911088302855">"最近没有任何日历活动"</string>
+</resources>
