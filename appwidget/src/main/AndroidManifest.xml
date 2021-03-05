@@ -9,15 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".EventInfoActivity"></activity>
         <activity android:name=".AllInOneActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Declarations for the widget -->
+        </activity> <!-- Declarations for the widget -->
         <receiver
             android:name=".widget.CalendarAppWidgetProvider"
             android:label="@string/app_name">
@@ -25,11 +24,11 @@
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.android.calendar3.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/calendar_appwidget_info" />
         </receiver>
-
         <receiver android:name=".widget.CalendarFactory">
             <intent-filter>
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
@@ -55,7 +54,22 @@
         <service
             android:name=".widget.CalendarAppWidgetService"
             android:exported="false"
-            android:permission="android.permission.BIND_REMOTEVIEWS"></service>
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
     </application>
+
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
 </manifest>
